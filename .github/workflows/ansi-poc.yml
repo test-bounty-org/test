@@ -9,9 +9,7 @@ jobs:
       - run: |
           printf 'ANSI_LOG_START
 '
-          printf '[31mRED_TEXT[0m
-'
-          printf ']0;PWNED_TITLE
-'
+          printf $'\033[31mRED_TEXT\033[0m\n'
+          printf $'\033]0;PWNED_TITLE\007\n'
           printf 'ANSI_LOG_END
 '
