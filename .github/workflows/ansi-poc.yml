@@ -1,0 +1,17 @@
+name: ansi-poc
+on:
+  workflow_dispatch:
+
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          printf 'ANSI_LOG_START
+'
+          printf '[31mRED_TEXT[0m
+'
+          printf ']0;PWNED_TITLE
+'
+          printf 'ANSI_LOG_END
+'
