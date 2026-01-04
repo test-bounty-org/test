@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Create artifact with nested path
         run: |
-          mkdir -p data/link
-          echo "pwned" > data/link/evil.txt
+          mkdir -p link
+          echo "pwned" > link/evil.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: symlink-poc
-          path: data
+          path: link
